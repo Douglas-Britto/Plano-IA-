@@ -1,8 +1,145 @@
-<html>
-  <head>
-    <title>Meu Site</title>
-  </head>
-  <body>
-    <h1>Olá, mundo!</h1>
-  </body>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA Plano Empreender</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #1c1c1c;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .sidebar {
+      background-color: #111;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 250px;
+      min-width: 250px;
+    }
+
+    .sidebar button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sidebar button:hover {
+      background-color: #444;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #222;
+    }
+
+    .header {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+    }
+
+    .header p {
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+
+    .chat-box {
+      flex-grow: 1;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .input-area {
+      display: flex;
+      border-top: 1px solid #444;
+    }
+
+    .input-area input {
+      flex-grow: 1;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 0;
+    }
+
+    .input-area button {
+      padding: 1rem;
+      background-color: #333;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        width: 100%;
+        min-width: auto;
+      }
+
+      .sidebar button {
+        flex: 1;
+        white-space: nowrap;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <button>Plano de Ação</button>
+      <button>Consultoria Express</button>
+      <button>Validação de Nicho</button>
+      <button>Ofertas no Whats</button>
+    </div>
+    <div class="main">
+      <div class="header">
+        <h1>Como vamos empreender hoje?</h1>
+        <p>Olá, sou a IA Plano Empreender.</p>
+      </div>
+      <div class="chat-box" id="chat-box">
+        <!-- Mensagens do chat aparecerão aqui -->
+      </div>
+      <div class="input-area">
+        <input type="text" placeholder="Digite sua pergunta..." />
+        <button>Enviar</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
